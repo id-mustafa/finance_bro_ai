@@ -73,7 +73,7 @@ Storage requirements depend on the size of the Chroma vector store and cached em
 
 Below is a high-level overview of the architecture:
 
-![](./images/architecture/diagram.svg)
+![Architecture Diagram](./images/architecture/diagram.svg)
 
 ### Components
 
@@ -148,13 +148,13 @@ To combat this, I moved over to a ChatGPT LLM approach to simplify the user expe
 ## Chat Interface
 
 ### Initial Screen
-![](./images/ui-mockups/initial-screen.png)
+![Initial Screen](./images/ui-mockups/initial-screen.png)
 
 ### Query Response
-![](./images/ui-mockups/query-response.png)
+![Query Response](./images/ui-mockups/query-response.png)
 
 ### Sources Expanded
-![](./images/ui-mockups/sources-expanded.png)
+![Sources Expanded](./images/ui-mockups/sources-expanded.png)
 
 # Revision History
 

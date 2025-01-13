@@ -1,4 +1,4 @@
-# finance_bro_ai
+# Finance Bro AI
 Finance Bro AI is an AI RAG (Retrieval Augmented Generation) application that is specifically tailored to answer the questions you have about stocks!
 
 DISCLAIMER: ALL SOURCE INFORMATION FROM FINANCIAL BRO AI COMES FROM INVESTOPEDIA ARTICLES. ALL CREDIT GOES TO INVESTOPEDIA. PLEASE CHECK OUT THEIR CONTENT USING THIS [LINK](https://www.investopedia.com/).

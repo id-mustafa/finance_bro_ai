@@ -1,9 +1,3 @@
----
-id: SW-0001
-revision: 1
-title: Software Design Specification
----
-
 # Purpose
 
 The purpose of this document is to describe *how* the Finance Bro AI software shall fulfill the software requirements. It discusses the environment that the software will run in, the software system's architecture, functional specifications associated with each software requirement, and user interface mockups.

@@ -79,33 +79,33 @@ Below is a high-level overview of the architecture:
 ## Key Modules
 
 ### Chroma Vector Store
-Responsible for storing and retrieving embeddings for documents.
+Responsible for storing and retrieving embeddings for documents. Chosen for its ease of use.
 
-### RetrievalQA
-Combines retriever functionality with LLM to provide context-aware responses.
+### Retrieval
+Combines retriever functionality with LLM to provide context-aware responses. Thorough documentation on the Chroma retriever and its Langchain compatibility.
 
 ### Indexing
-Manages the ingestion and splitting of documents into embeddings.
+Manages the ingestion and splitting of documents into embeddings. Langchain was chosen for its thorough documentation and fast development.
 
 ### Streamlit UI
-Provides an interface for user input and displays results.
+Provides an interface for user input and displays results. Chosen because it created a clean UI with no css and less focus on styling with more focus on functionality.
 
 # Design Challenges
 
 ## Memory Management
-The application does not implement long-term memory for conversations but maintains session-level context via Streamlit’s session state. This approach balances performance with user experience but limits historical context retention across sessions.
+The application does not implement long-term memory for conversations but maintains session-level context via Streamlit’s session state. This approach balances performance with user experience but limits historical context retention across sessions. Would Implement this next time around.
 
 ### Solution
 To address this, a `RunnableWithMessageHistory` component can be integrated to persist conversation history efficiently, enabling a more robust user experience without overwhelming system resources. However this may be kept as a stretch goal due to time constraints.
 
 ## Embedding and Storage
-Efficient handling of embeddings and retrievals was critical for ensuring fast response times and minimal resource consumption.
+Efficient handling of embeddings and retrievals was critical for ensuring fast response times and minimal resource consumption. Initially had too much documentation and had to scale back.
 
 ### Solution
-Chroma’s vector store was selected for its performance and compatibility with LangChain, simplifying the integration process. 
+Chroma’s vector store was selected for its performance and compatibility with LangChain, simplifying the integration process. Scaled back the amount of documentation embedded so that the AI could process coherent results under a short amount of time with little tuning.
 
 ## HuggingFace Open Source LLM Approach Had No Context Awareness
-There was a lack of context awareness using this LLM and it couldn't interpret basic queries such as "hey." 
+There was a lack of context awareness using this LLM and it couldn't interpret basic queries such as "hey." For the Next time, I would like to implement a free AI model instead of a paid version.
 
 ### Solution
 To combat this, I moved over to a ChatGPT LLM approach to simplify the user experience. Now the RAG Application is powered behind the OpenAI gpt-4o model for better user interaction.

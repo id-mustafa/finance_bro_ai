@@ -7,7 +7,7 @@ Please make sure you look through the following documentation before attempting 
 
 ### Table of Contents
 1) [Introductory Setup](/docs/setup.md)
-2) [developers](/docs/developers.md)
+2) [Developers](/docs/developers.md)
 3) [Design Specification](/docs/design_specification.md)
 
 

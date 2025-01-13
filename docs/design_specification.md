@@ -67,7 +67,7 @@ Storage requirements depend on the size of the Chroma vector store and cached em
 
 Below is a high-level overview of the architecture:
 
-![Architecture Diagram](./images/architecture/diagram.svg)
+![Architecture Diagram](/images/architecture/diagram.png)
 
 ### Components
 
@@ -142,17 +142,17 @@ To combat this, I moved over to a ChatGPT LLM approach to simplify the user expe
 ## Chat Interface
 
 ### Initial Screen
-![Initial Screen](./images/ui-mockups/initial-screen.png)
+![Initial Screen](/images/ui-mockups/initial-screen.png)
 
 ### Query Response
-![Query Response](./images/ui-mockups/query-response.png)
+![Query Response](/images/ui-mockups/query-response.png)
 
 ### Sources Expanded
-![Sources Expanded](./images/ui-mockups/sources-expanded.png)
+![Sources Expanded](/images/ui-mockups/sources-expanded.png)
 
 # Revision History
 
 | Revision | Notes |
 | --- | --- |
-| 1 | Initial draft created for Finance Bro AI SDS. |
+| 1 | Initial draft created for Finance Bro AI. |
 

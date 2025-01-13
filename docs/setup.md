@@ -5,12 +5,11 @@ MAKE SURE YOU ADD THIS TO THE .gitignore FILE AS /venv
 
 The dependencies needed to install for this project are going to be placed within the requirements.txt file for easy package management. You can run the following command to install all dependencies:
 
-you may also run the command: 
 ```pip3 install -r requirements.txt```
 
 Make sure you have an OpenAI API key, if you already have an account, then you can set the OpenAPI key in the .env file. Note that to run this application, you need to have OpenAI credits. This is done for simplicity sake of getting an MVP up fast with a model that is able to respond well to user input. As a stretch goal, it would be nice to migrate this setup to a model that has a free tier!
 
-First create the .env file and the OpenAPI key usage is going to be listed in the .env file as:
+First create the .env file and the OpenAPI key is going to be listed in the .env file as:
 
 ```OPENAI_API_KEY=<YOUR API KEY>```
 

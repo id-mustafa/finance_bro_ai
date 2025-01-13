@@ -20,9 +20,9 @@ The scope of this SDS applies in its entirety to the Finance Bro AI project.
 
 # Acronyms and Abbreviations
 
-**LLM** Large Language Model  
-**UI** User Interface  
-**API** Application Programming Interface
+**LLM** - Large Language Model  
+**UI** - User Interface  
+**API** - Application Programming Interface
 
 # Software Description
 

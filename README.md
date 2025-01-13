@@ -13,4 +13,4 @@ Please make sure you look through the following documentation before attempting 
 
 ### Running the application 
 To run the application, you would need to run the following command:
-```bash streamlit run 1_🤖_Finance_Bro_AI.py```
+```streamlit run 1_🤖_Finance_Bro_AI.py```

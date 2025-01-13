@@ -1,7 +1,9 @@
 import streamlit as st
 from langchain_chroma import Chroma
 from langchain_openai import OpenAIEmbeddings, ChatOpenAI
-from langchain.chains import RetrievalQA
+from langchain.chains.retrieval import create_retrieval_chain
+from langchain.chains.combine_documents import create_stuff_documents_chain
+from langchain_core.prompts import ChatPromptTemplate
 from dotenv import load_dotenv
 import os
 
@@ -40,12 +42,21 @@ def build_retrieval_qa():
         openai_api_key=OPENAI_API_KEY,
         temperature=0.7,
     )
-    chain = RetrievalQA.from_chain_type(
-        llm=llm,
-        chain_type="stuff",
-        retriever=retriever,
-        return_source_documents=True,
+    system_prompt = (
+    "You are serving as a Financial assistant. Use the given context to answer the question. "
+    "If you don't know the answer, say you don't know. "
+    "Context: {context}"
     )
+    prompt = ChatPromptTemplate.from_messages(
+    [
+        ("system", system_prompt),
+        ("human", "{input}"),
+    ]
+    )
+    question_answer_chain = create_stuff_documents_chain(llm, prompt)
+
+    chain = create_retrieval_chain(retriever, question_answer_chain)
+
     return chain
 
 # Some of the code below has been copied from streamlit documentation
@@ -77,9 +88,9 @@ if user_input:
     with st.chat_message("assistant"):
         with st.spinner("Retrieving and generating response..."):
             chain = build_retrieval_qa()
-            result = chain(user_input)
-            answer = result["result"]
-            sources = result["source_documents"]
+            result = chain.invoke({"input": user_input})
+            answer = result.get("answer", "Sorry, I couldn't find an answer.")
+            sources = result.get("context", [])
 
     # 3) Display the assistant's response
     st.markdown(answer)

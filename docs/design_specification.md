@@ -14,7 +14,7 @@ The scope of this SDS applies in its entirety to the Finance Bro AI project.
 
 **Chroma** A vector store used to store embeddings for efficient similarity search and retrieval.
 
-**RetrievalQA** A chain combining a retriever and a large language model (LLM) to generate contextually aware answers.
+**Retrieval** A chain combining a retriever and a large language model (LLM) to generate contextually aware answers. 
 
 **LLM** Large Language Model used to generate natural language responses, such as GPT-4.
 
